@@ -31,7 +31,7 @@ namespace CourseManagementSystem
 
         public clsCourse(int courseID, string courseName, string courseLocation, string courseDuration, string courseSemester, string startDate, string endDate, string courseDelivery, int hoursPerWeek, int noOfUnits, double courseFee)
         {
-            this.courseID = courseID;
+            this.courseID =  courseID;
             this.courseName = courseName;
             this.courseLocation = courseLocation;
             this.courseDuration = courseDuration;
