@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using clDatabase;
 using System.Data;
+using DatabaseClass;
 
 namespace CourseManagementSystem
 {
@@ -265,7 +265,7 @@ namespace CourseManagementSystem
         public void AddStudent()
         {
             SqlConnection objConnection = clsDatabase.CreateConnection();
-            SqlCommand objCommand = new SqlCommand("CheckIfUnitCodeExists", objConnection);
+            SqlCommand objCommand = new SqlCommand("CheckIfStudentIDExists", objConnection);
             objCommand.CommandType = CommandType.StoredProcedure;
             SqlDataReader objDataReader = objCommand.ExecuteReader();
             objDataReader.Read();
